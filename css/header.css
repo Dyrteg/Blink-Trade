@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C1A24;
+    font-family: Inter;
+}
+
+.container {
+    max-width: 1846px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 45px;
+}
+
+.header__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 210px;
+    border: none;
+    background: #806CF5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header__trade{
+    color: #FFF;    
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header__lable {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.header__button:hover {
+    background: #9F8FFF;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
