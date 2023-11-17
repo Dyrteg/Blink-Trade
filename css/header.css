@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px 45px;
+    margin: 20px 45px;
 }
 
 .header__button {
@@ -47,4 +47,9 @@
 .header__logo {
     display: flex;
     align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 35px;
 }

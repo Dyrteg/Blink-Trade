@@ -1,14 +1,14 @@
 {
-  "name": "json-sever__lesson",
+  "name": "blink-trade",
   "version": "1.0.0",
-  "description": "",
+  "description": "Курсовая работа\r Сайта \"Blink Trade\"",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sergo",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.3"

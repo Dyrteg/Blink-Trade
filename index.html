@@ -19,21 +19,81 @@
                 <p class="header__trade">TRADE</p>
             </div>
             <div class="header__auth">
-                <button class="header__button">
+                <button id="open-modal-button" class="header__button">
                     <span class="header__lable">Авторизоваться</span>
                 </button>
             </div>
         </header>
 
+        <div id="modal">
+            <div id="modal-content">
+                <span class="close-button">&#10006;</span> <!-- Крестик для закрытия -->
+                <h2>Авторизация</h2>
+                <form id="login-form">
+                    <label for="username">Имя пользователя:</label>
+                    <input type="text" id="username" name="username" required><br>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required><br>
+                    <button type="submit">Войти</button>
+                </form>
+                <div id="message"></div>
+            </div>
+        </div>
+
         <main class="main">
             <div class="main__block-one">
 
-            </div>
-            <div class="main__filter">
+                    <div class="main__accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <div class="arrow"></div>
+                                    <p class="accordion-text">Вы предлагаете</p>
+                                </div>
+                                <div class="accordion-total-price">
+                                    <div class="accordion-price">0 ₽</div>
+                                    <img src="./img/basket.png" alt="basket" class="accordion-basket">
+                                </div>
+                            </div>
+                            <div class="accordion-content-one"></div>
+                        </div>
+                    </div>
 
+                    <div id="main__item-block-one">
+
+                    </div>
+            </div>
+
+            <div class="main__button">
+                <div class="main__button-trade">Обмен</div>
+                <div class="main__button-price">
+                    <p class="button-price__text">Цена</p>
+                    <input type="text" name="price-one" id="button-price__one" placeholder="₽ 0.00">
+                    -
+                    <input type="text" name="price-two" id="button-price__two" placeholder="₽ 0.00">
+                </div>
             </div>
             <div class="main__block-two">
-                
+
+                <div class="main__accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-total-price">
+                                <div class="accordion-price">0 ₽</div>
+                                <img src="./img/basket.png" alt="basket" class="accordion-basket">
+                            </div>
+                            <div class="accordion-title">
+                                <div class="arrow"></div>
+                                <p class="accordion-text">Вы получаете</p>
+                            </div>
+                        </div>
+                        <div class="accordion-content-two"></div>
+                    </div>
+                </div>
+
+                <div id="main__item-block-two">
+
+                </div>
             </div>
         </main>
     </div>

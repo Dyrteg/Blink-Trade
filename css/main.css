@@ -3,6 +3,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -11,10 +13,220 @@
 
 body {
     background-color: #1C1A24;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    margin-bottom: 0px;
 }
 
 .container {
-    max-width: 1836px;
+    max-width: 1830px;
     margin: auto;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main__accordion {
+    width: 800px;
+}
+
+.accordion-item {
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+.accordion-header:hover {
+    background: #4A4853;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+}
+
+.accordion-header {
+    background-color: #282633; /* Устанавливаем цвет для заголовка */
+    color: #fff; /* Устанавливаем белый цвет текста */
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transform: translateY(-50%);
+    border-top: 2px solid #fff; /* Стрелка вверх */
+    border-right: 2px solid #fff; /* Стрелка вправо (начальное состояние) */
+    transition: transform 0.3s ease-in-out; /* Добавляем плавный переход */
+}
+
+.accordion-content-one, .accordion-content-two  {
+    display: none;
+    height: 255px;
+    background: #282633;
+}
+
+.arrow.active {
+    transform: translateY(-50%) rotate(90deg); /* Переворачиваем стрелку при активации */
+}
+
+.accordion-content-one.active, .accordion-content-two.active {
+    display: block; /* Показываем содержимое активной панели */
+}
+
+.accordion-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.accordion-total-price {
+    color: #747180;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#main__item-block-one, #main__item-block-two {
+    width: 800px;
+    height: 750px;
+    background-color: #282633;
+}
+
+.main__button {
+    width: 180px;
+    height: 130px;
+}
+
+.main__button-trade {
+    width: 176px;
+    height: 38px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4E438D;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__button-trade:hover {
+    background-color: #9f8fff;
+}
+
+.button-price__text {
+    color: white;
+}
+
+.main__button-price {
+    margin-top: 25px;
+}
+
+#button-price__one, #button-price__two {
+    width: 74px;
+    height: 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #403D4D;
+    border: 0px;
+    padding-left: 5px;
+}
+
+#button-price__one:focus, #button-price__two:focus {
+    outline: none;
+    padding-left: 5px;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Стили для кнопки открытия модального окна */
+.header__button  {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.header__button :hover {
+    background-color: #0056b3;
+}
+
+/* Стили для формы в модальном окне */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для сообщения об успехе или ошибке */
+#message {
+    margin-top: 10px;
+    color: #ff0000;
+}
+
+/* Стили для крестика (закрытия) */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }

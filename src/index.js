@@ -1,3 +1,5 @@
-import { first } from "./modules/first";
+import { accordion } from "./modules/accordion.js";
+import { auth } from "./modules/auth.js";
 
-first()
+accordion();
+auth();
