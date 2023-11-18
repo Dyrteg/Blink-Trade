@@ -1,0 +1,352 @@
+[
+    {
+        "id": 1,
+        "title": "Dragonclaw Hook",
+        "price": "2 022.89 ₽",
+        "image": "dragonclaw_hook.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 2,
+        "title": "Golden Bashers of Mage Skulls",
+        "price": "3 500.00 ₽",
+        "image": "golden_bashers.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 3,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 4,
+        "title": "Exalted Rapiers of the Burning God",
+        "price": "4 500.00 ₽",
+        "image": "rapiers_burning_god.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 5,
+        "title": "Bloodthorn",
+        "price": "300.00 ₽",
+        "image": "bloodthorn.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 6,
+        "title": "Auspicious Scythe of Vyse",
+        "price": "2 022.89 ₽",
+        "image": "scythe_of_vyse.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 7,
+        "title": "Dark Artistry Cape",
+        "price": "3 500.00 ₽",
+        "image": "dark_artistry_cape.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 8,
+        "title": "Molten Claw",
+        "price": "789.99 ₽",
+        "image": "molten_claw.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 9,
+        "title": "Divine Rapier",
+        "price": "4 500.00 ₽",
+        "image": "divine_rapier.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 10,
+        "title": "Blink Dagger",
+        "price": "300.00 ₽",
+        "image": "blink_dagger.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 11,
+        "title": "Genuine Skadi",
+        "price": "2 022.89 ₽",
+        "image": "genuine_skadi.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 12,
+        "title": "Terrorblade's Arcana",
+        "price": "3 500.00 ₽",
+        "image": "terrorblade_arcana.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 13,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 14,
+        "title": "Exalted Rapiers of the Burning God",
+        "price": "4 500.00 ₽",
+        "image": "rapiers_burning_god.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 15,
+        "title": "Basher Blades",
+        "price": "300.00 ₽",
+        "image": "basher_blades.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 16,
+        "title": "Exalted Monarch Bow",
+        "price": "2 022.89 ₽",
+        "image": "monarch_bow.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 17,
+        "title": "Exalted Blades of Voth Domosh",
+        "price": "3 500.00 ₽",
+        "image": "blades_voth_domosh.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 18,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 19,
+        "title": "Axe's Golden Edge",
+        "price": "4 500.00 ₽",
+        "image": "axe_golden_edge.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 20,
+        "title": "Shadow Blade",
+        "price": "300.00 ₽",
+        "image": "shadow_blade.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 21,
+        "title": "Genuine Heaven-Piercing Pauldrons",
+        "price": "2 022.89 ₽",
+        "image": "pauldrons.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 22,
+        "title": "Genuine Wyrmwrought Flare",
+        "price": "3 500.00 ₽",
+        "image": "wyrmwrought_flare.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 23,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 24,
+        "title": "Inscribed Gravelmaw",
+        "price": "4 500.00 ₽",
+        "image": "gravelmaw.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 25,
+        "title": "Blink Dagger",
+        "price": "300.00 ₽",
+        "image": "blink_dagger.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 26,
+        "title": "Dragon's Blood Set",
+        "price": "2 022.89 ₽",
+        "image": "dragons_blood_set.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 27,
+        "title": "Juggernaut's Arcana",
+        "price": "3 500.00 ₽",
+        "image": "juggernaut_arcana.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 28,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 29,
+        "title": "Exalted Crescent Sickle of the Druids",
+        "price": "4 500.00 ₽",
+        "image": "crescent_sickle_druids.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 30,
+        "title": "Blink Dagger",
+        "price": "300.00 ₽",
+        "image": "blink_dagger.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 31,
+        "title": "Genuine Arctic Hunter Set",
+        "price": "2 022.89 ₽",
+        "image": "arctic_hunter_set.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 32,
+        "title": "Exalted Manifold Paradox",
+        "price": "3 500.00 ₽",
+        "image": "manifold_paradox.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 33,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 34,
+        "title": "Exalted Dragon Form",
+        "price": "4 500.00 ₽",
+        "image": "dragon_form.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 35,
+        "title": "Blink Dagger",
+        "price": "300.00 ₽",
+        "image": "blink_dagger.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 36,
+        "title": "Genuine Flameguard Set",
+        "price": "2 022.89 ₽",
+        "image": "flameguard_set.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 37,
+        "title": "Ember Spirit's Arcana",
+        "price": "3 500.00 ₽",
+        "image": "ember_spirit_arcana.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 38,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 39,
+        "title": "Exalted Manifold Paradox",
+        "price": "4 500.00 ₽",
+        "image": "manifold_paradox.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 40,
+        "title": "Blink Dagger",
+        "price": "300.00 ₽",
+        "image": "blink_dagger.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 41,
+        "title": "Genuine Arctic Hunter Set",
+        "price": "2 022.89 ₽",
+        "image": "arctic_hunter_set.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 42,
+        "title": "Exalted Manifold Paradox",
+        "price": "3 500.00 ₽",
+        "image": "manifold_paradox.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 43,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 44,
+        "title": "Exalted Dragon Form",
+        "price": "4 500.00 ₽",
+        "image": "dragon_form.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 45,
+        "title": "Blink Dagger",
+        "price": "300.00 ₽",
+        "image": "blink_dagger.jpg",
+        "rarity": "Common"
+    },
+    {
+        "id": 46,
+        "title": "Genuine Flameguard Set",
+        "price": "2 022.89 ₽",
+        "image": "flameguard_set.jpg",
+        "rarity": "Mythical"
+    },
+    {
+        "id": 47,
+        "title": "Ember Spirit's Arcana",
+        "price": "3 500.00 ₽",
+        "image": "ember_spirit_arcana.jpg",
+        "rarity": "Arcana"
+    },
+    {
+        "id": 48,
+        "title": "Inscribed Blade of the Abyss",
+        "price": "789.99 ₽",
+        "image": "blade_of_the_abyss.jpg",
+        "rarity": "Rare"
+    },
+    {
+        "id": 49,
+        "title": "Exalted Manifold Paradox",
+        "price": "4 500.00 ₽",
+        "image": "manifold_paradox.jpg",
+        "rarity": "Legendary"
+    },
+    {
+        "id": 50,
+        "title": "Blink Dagger",
+        "price": "300.00 ₽",
+        "image": "blink_dagger.jpg",
+        "rarity": "Common"
+    }
+]

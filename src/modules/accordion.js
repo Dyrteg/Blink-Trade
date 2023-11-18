@@ -3,6 +3,8 @@ export const accordion = () => {
         const accordionItems = document.querySelectorAll('.accordion-item');
         const mainItemBlockOne = document.getElementById('main__item-block-one');
         const mainItemBlockTwo = document.getElementById('main__item-block-two');
+        const mainItemBlockOneContainer = document.getElementById('main__item-warning-container');
+        
         
     
         accordionItems.forEach((item) => {
@@ -15,13 +17,14 @@ export const accordion = () => {
                 contentOne.classList.toggle('active');
                 contentTwo.classList.toggle('active');
                 arrow.classList.toggle('active'); // Переключаем класс "active" для стрелки
-                console.log(contentOne.classList.value);
                 if (contentOne.classList.value === 'accordion-content-one active') {
                     mainItemBlockOne.style.height = "500px";
                     mainItemBlockTwo.style.height = "500px";
+                    mainItemBlockOneContainer.style.height = "450px";
                 } else {
-                    mainItemBlockOne.style.height = "750px";
-                    mainItemBlockTwo.style.height = "750px";
+                    mainItemBlockOne.style.height = "770px";
+                    mainItemBlockTwo.style.height = "770px";
+                    mainItemBlockOneContainer.style.height = "750px";
                 }
                 
             });

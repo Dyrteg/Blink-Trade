@@ -20,6 +20,17 @@ p {
     margin-bottom: 0px;
 }
 
+a:hover {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 .container {
     max-width: 1830px;
     margin: auto;
@@ -76,6 +87,15 @@ p {
     background: #282633;
 }
 
+.accorion-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding-top: 10px;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
 .arrow.active {
     transform: translateY(-50%) rotate(90deg); /* Переворачиваем стрелку при активации */
 }
@@ -100,8 +120,9 @@ p {
 
 #main__item-block-one, #main__item-block-two {
     width: 800px;
-    height: 750px;
+    height: 770px;
     background-color: #282633;
+    border-radius: 5px;
 }
 
 .main__button {
@@ -142,6 +163,7 @@ p {
     background-color: #403D4D;
     border: 0px;
     padding-left: 5px;
+    color: #fff;
 }
 
 #button-price__one:focus, #button-price__two:focus {
@@ -188,14 +210,14 @@ h2 {
 }
 
 /* Стили для формы в модальном окне */
-label {
+#modal label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="password"] {
+#modal input[type="text"],
+#modal input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -204,7 +226,7 @@ input[type="password"] {
     font-size: 16px;
 }
 
-button[type="submit"] {
+#modal button[type="submit"] {
     background-color: #007bff;
     color: #ffffff;
     padding: 10px 20px;
@@ -213,7 +235,7 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
+#modal button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
@@ -229,4 +251,175 @@ button[type="submit"]:hover {
     top: 10px;
     right: 10px;
     cursor: pointer;
+}
+
+.item__search {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.item__search-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #403D4D;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: all ease-in-out .5s;
+    width: 300px;
+}
+
+.item__search-input:hover, .item__search-input:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+
+.item__search-input:focus {
+    outline: none;
+    background-color: #403D4D;
+}
+
+.item__search-input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+.item__search-input:focus + .main__item-search-button {
+    background-color: #f0eeee;
+}
+
+.item__search-button {
+    border: none;
+    background-color: #403D4D;
+    margin-top: .1em;
+    border-radius: 5px;
+}
+
+.item__search-button:hover {
+    cursor: pointer;
+}
+
+.item__search-image {
+    margin-left: 10px;
+}
+
+#main__item-warning-container {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__item-warning {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item__warning-title {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item__warning-description {
+    color: rgba(255, 255, 255, 0.30);
+    text-align: center;
+    letter-spacing: 0.08px;
+    width: 290px;
+}
+
+.item__warning {
+    margin-bottom: 25px;
+}
+
+.item__warning-title {
+    margin-bottom: 10px;
+}
+
+.main__item-container {
+    height: 680px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    gap: 10px;
+    overflow-y: scroll; /* прокрутка по вертикали */
+}
+
+.main__item-container-one {
+    display: none;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 3px;  /* ширина scrollbar */
+    height: 10px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: rgb(40, 38, 51);   /* цвет дорожки */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(64, 61, 77);    /* цвет плашки */
+    border-radius: 5px;       /* закругления плашки */
+}
+
+.item__card {
+    color: #fff;
+    width: 190px;
+    height: 220px;
+    border-radius: 5px;
+    background: #312F3D;
+    
+}
+
+.item__card:hover {
+    background: #555261;
+}
+
+.card__description {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0px 10px 0px 10px;
+}
+
+.card__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 84%;
+    overflow: hidden;
+    width: 147px;
+    height: 97px;
+    margin: 0px 25px 10px 25px;
+    padding-top: 10px;
+}
+
+.card__picture {
+    width: 105%;
+    height: 105%;
+}
+
+.card__price {
+    font-size: 13px;
+}
+
+.card__rarity {
+    font-size: 11px;
+    color: #a574ff;;
+}
+
+.card__basket {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 28px;
+    cursor: pointer;
+    background-color: #403d4d;
+    border: none;
+    border-radius: 4px;
 }
