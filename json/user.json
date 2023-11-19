@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "Dyrteg",
+            "password": "1",
+            "itemIds": [1, 2]
+        },
+        {
+            "id": 2,
+            "username": "user2",
+            "password": "password2",
+            "itemIds": [3, 4]
+        }
+    ]
+}

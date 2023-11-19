@@ -1,4 +1,6 @@
 
+import { renderUserItem } from "./renderUserItem";
+
 export const auth = () => {
     function openModal() {
         document.getElementById('modal').style.visibility = 'visible';
@@ -19,15 +21,17 @@ export const auth = () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        fetch('../../json/auth.json')
+        fetch('../../json/user.json')
             .then(response => response.json())
             .then(data => {
                 const users = data.users;
                 const user = users.find(u => u.username === username && u.password === password);
 
+
                 if (user) {
                     document.getElementById('message').textContent = 'Авторизация успешна!';
                     closeModal(); // Закрыть модальное окно после успешной авторизации
+                    renderUserItem(user.id);
                 } else {
                     document.getElementById('message').textContent = 'Неправильное имя пользователя или пароль.';
                 }

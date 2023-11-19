@@ -341,7 +341,7 @@ h2 {
     height: 680px;
     margin-top: 15px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-left: 5px;
     gap: 10px;
@@ -413,6 +413,13 @@ h2 {
     color: #a574ff;;
 }
 
+.card__title {
+    width: 170px;
+    white-space: nowrap; /* Запретить перенос текста на новую строку */
+    overflow: hidden; /* Скрыть текст, который не помещается в контейнере */
+    text-overflow: ellipsis; /* Добавить многоточие в конце текста */
+}
+
 .card__basket {
     align-items: center;
     justify-content: center;
@@ -422,4 +429,12 @@ h2 {
     background-color: #403d4d;
     border: none;
     border-radius: 4px;
+}
+
+.card__basket:hover {
+    background-color: #806cf5;  
+}
+
+.card__basket:hover .card__basket-picture {
+    filter: brightness(10);
 }
