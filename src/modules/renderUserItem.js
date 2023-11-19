@@ -42,14 +42,16 @@ export const renderUserItem = (userID) => {
                     <div class="card__image">
                         <img src="${cardData.image}" alt="currier" class="card__picture">
                     </div>
-                                
+                    <div class="card__id">${cardData.itemId}</div>
                     <div class="card__description">
                         <p class="card__title">${cardData.title}</p>
                         <p class="card__rarity">${cardData.rarity}</p>
-                        <p class="card__price">${cardData.price}</p>
+                        <p class="card__price">${cardData.price + '₽'}</p>
+                        <div class="card__button">
                         <button class="card__basket">
                             <img src="./img/basket.png" alt="basket" class="card__basket-picture">
                         </button>
+                        </div>
                     </div>
                 </div>
                 `

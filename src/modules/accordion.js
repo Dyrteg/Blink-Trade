@@ -1,6 +1,8 @@
 export const accordion = () => {
     document.addEventListener("DOMContentLoaded", function () {
         const accordionItems = document.querySelectorAll('.accordion-item');
+        const mainItemContainerOne = document.querySelector('.main__item-container-one');
+        const mainItemContainerTwo = document.querySelector('.main__item-container-two');
         const mainItemBlockOne = document.getElementById('main__item-block-one');
         const mainItemBlockTwo = document.getElementById('main__item-block-two');
         const mainItemBlockOneContainer = document.getElementById('main__item-warning-container');
@@ -21,10 +23,14 @@ export const accordion = () => {
                     mainItemBlockOne.style.height = "500px";
                     mainItemBlockTwo.style.height = "500px";
                     mainItemBlockOneContainer.style.height = "450px";
+                    mainItemContainerOne.style.height = "410px";
+                    mainItemContainerTwo.style.height = "410px";
                 } else {
                     mainItemBlockOne.style.height = "770px";
                     mainItemBlockTwo.style.height = "770px";
-                    mainItemBlockOneContainer.style.height = "750px";
+                    mainItemBlockOneContainer.style.height = "700px";
+                    mainItemContainerOne.style.height = "680px";
+                    mainItemContainerTwo.style.height = "680px";
                 }
                 
             });

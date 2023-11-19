@@ -49,6 +49,7 @@ a {
 .accordion-item {
     border: 0px;
     margin-bottom: 10px;
+    background: #282633;
 }
 
 .accordion-header:hover {
@@ -81,7 +82,7 @@ a {
     transition: transform 0.3s ease-in-out; /* Добавляем плавный переход */
 }
 
-.accordion-content-one, .accordion-content-two  {
+.accordion-content, .accordion-content  {
     display: none;
     height: 255px;
     background: #282633;
@@ -116,6 +117,16 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.accordion-container-content-two, .accordion-container-content-one {
+    display: flex;
+    height: 255px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    overflow-y: scroll;
 }
 
 #main__item-block-one, #main__item-block-two {
@@ -404,6 +415,10 @@ h2 {
     height: 105%;
 }
 
+.card__id {
+    display: none;
+}
+
 .card__price {
     font-size: 13px;
 }
@@ -429,6 +444,8 @@ h2 {
     background-color: #403d4d;
     border: none;
     border-radius: 4px;
+    position: relative;
+    display: inline-block;
 }
 
 .card__basket:hover {
@@ -437,4 +454,28 @@ h2 {
 
 .card__basket:hover .card__basket-picture {
     filter: brightness(10);
+}
+
+.basket .card__basket {
+    background: rgba(255,128,149,.25);
+}
+
+.basket .card__basket-picture {
+    filter: invert(62%) sepia(17%) saturate(1650%) hue-rotate(304deg) brightness(102%) contrast(101%)
+}
+
+.basket .card__basket:hover .card__basket-picture{
+    filter: invert(62%) sepia(17%) saturate(1650%) hue-rotate(304deg) brightness(102%) contrast(101%)
+}
+
+.basket .card__basket::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 5;
+    width: 15%;
+    height: 2px;
+    background-color: #ff8095;
+    transform: rotate(-45deg);
 }
