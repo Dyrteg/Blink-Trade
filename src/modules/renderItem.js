@@ -1,3 +1,5 @@
+import { URL_ITEMS } from "../index.js";
+
 export const render = () => {
     document.addEventListener('DOMContentLoaded', function () {
         const cardsContainer = document.querySelector('.main__item-container-two');
@@ -7,7 +9,7 @@ export const render = () => {
         accordionPriceOne.innerHTML = '0';
     
         // Используйте fetch для получения данных из файла JSON
-        fetch('../../json/items.json')
+        URL_ITEMS
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

@@ -7,7 +7,6 @@ export const addBasket = () => {
             const accordionContainerContentTwo = document.querySelector('.accordion-container-content-two');
             const accordionContainerContentOne = document.querySelector('.accordion-container-content-one');
             
-
             fetch('../../json/items.json')
                 .then(response => {
                     if (!response.ok) {
@@ -35,7 +34,6 @@ export const addBasket = () => {
                                         if (cardId === (item.querySelector('.card__id').innerHTML)) {
                                             totalPriceTwo(item);
                                             item.remove();
-                                            
                                         }
                                     })
                                 } else {
@@ -62,8 +60,32 @@ export const addBasket = () => {
                                     accordionContainerContentTwo.insertAdjacentHTML('beforeend', card);
                                     totalPriceTwoSum();
                                 }
-                                
-                            } else if (mainItemContainer.classList.contains('main__item-container-one')) {
+                            }
+                        }
+                    }
+                }
+            )};
+
+            fetch('../../json/useritems.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                        return response.json(); // Разрешение Promise с данными JSON
+                })
+                .then(data => {
+                    // Рендеринг карточек на основе полученных данных
+                    renderUserBasket(data.items)
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+
+            function renderUserBasket(data) {
+                data.forEach(e => {
+                    if(e.itemId === parseInt(cardId)) {
+                        if (item.closest('.scroll').classList.contains('main__item-container')){
+                            if (mainItemContainer.classList.contains('main__item-container-one')) {
                                 if(item.classList.contains('basket')){
                                     item.classList.remove('basket');
                                     const itemInAccordion = accordionContainerContentOne.querySelectorAll('.item__card');
@@ -73,7 +95,7 @@ export const addBasket = () => {
                                             item.remove();
                                         }
                                     })
-                                }  else {
+                                } else {
                                     item.classList.add('basket');
                                     const card = `
                                     <div class="item__card basket">
@@ -93,37 +115,37 @@ export const addBasket = () => {
                                         </div>
                                     </div>
                                     `
-    
+                
                                     accordionContainerContentOne.insertAdjacentHTML('beforeend', card);
                                     totalPriceOneSum();
                                 }
                             }
-                        } else {
-                            if (item.closest('.accordion-content').classList.contains('accordion-content-two')) {
-                                const mainItemContainerTwo = document.querySelector('.main__item-container-two');
-                                mainItemContainerTwo.querySelectorAll('.item__card').forEach(item => {
-                                    if(item.classList.contains('basket')) {
-                                        if (cardId === (item.querySelector('.card__id').innerHTML)) {
-                                            item.classList.remove('basket');
-                                        }
-                                        
-                                    };
-                                })
-                                totalPriceTwo(item);
-                                item.remove()
-                                
-                            } else if(item.closest('.accordion-content').classList.contains('accordion-content-one')) {
-                                const mainItemContainerOne = document.querySelector('.main__item-container-one');
-                                mainItemContainerOne.querySelectorAll('.item__card').forEach(item => {
-                                    if(item.classList.contains('basket')) {
-                                        if (cardId === (item.querySelector('.card__id').innerHTML))
+                    } else {
+                        if (item.closest('.accordion-content').classList.contains('accordion-content-two')) {
+                            const mainItemContainerTwo = document.querySelector('.main__item-container-two');
+                            mainItemContainerTwo.querySelectorAll('.item__card').forEach(item => {
+                                if(item.classList.contains('basket')) {
+                                    if (cardId === (item.querySelector('.card__id').innerHTML)) {
                                         item.classList.remove('basket');
-                                    };
-                                })
-                                totalPriceOne(item);
-                                item.remove()
-                            }
+                                    }
+                                        
+                                };
+                            })
+                            totalPriceTwo(item);
+                            item.remove()
+                                
+                        } else if(item.closest('.accordion-content').classList.contains('accordion-content-one')) {
+                            const mainItemContainerOne = document.querySelector('.main__item-container-one');
+                            mainItemContainerOne.querySelectorAll('.item__card').forEach(item => {
+                                if(item.classList.contains('basket')) {
+                                    if (cardId === (item.querySelector('.card__id').innerHTML))
+                                    item.classList.remove('basket');
+                                };
+                            })
+                            totalPriceOne(item);
+                            item.remove()
                         }
+                    }
                 }
             }); 
             }
@@ -143,7 +165,6 @@ export const addBasket = () => {
         }
         
         function totalPriceTwo (item) {
-            console.log(item);
             const accordionPriceTwo = document.querySelector('.accordion-price-two');
             let accordionPriceTotalTwo = document.querySelector('.accordion-price-two').innerHTML;
             let accordionPriceTotalSum = parseFloat(accordionPriceTotalTwo) - parseFloat(item.querySelector('.card__price').innerHTML.replaceAll(' ', ''));

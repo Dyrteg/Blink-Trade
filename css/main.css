@@ -152,9 +152,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 0px;
 }
 
-.main__button-trade:hover {
+.activated{
     background-color: #9f8fff;
 }
 

@@ -1,4 +1,4 @@
-
+import { URL_USER } from "../index.js";
 import { renderUserItem } from "./renderUserItem";
 
 export const auth = () => {
@@ -21,7 +21,7 @@ export const auth = () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        fetch('../../json/user.json')
+        URL_USER
             .then(response => response.json())
             .then(data => {
                 const users = data.users;
