@@ -11,32 +11,32 @@ export const renderUserItem = (userID) => {
     
         // Используйте fetch для получения данных из файла JSON
     // Загрузка данных о предметах
-    URL_USERITEMS
-    .then(response => response.json())
+    // Загрузка данных о предметах для конкретного пользователя
+    fetch('http://localhost:3000/useritems')
+    .then(itemsResponse => itemsResponse.json())
     .then(itemsData => {
-        // Загрузка данных о пользователях
-        fetch('../../json/user.json')
-            .then(response => response.json())
-            .then(usersData => {
-                // Объединение данных и рендеринг пользователей
-                const usersWithItems = usersData.users.map(user => {
-                    const userItems = user.itemIds.map(itemId => {
-                        return itemsData.items.find(item => item.itemId === itemId);
-                    });
-                    return { ...user, items: userItems };
-                });
-                renderItems(usersWithItems);
-            })
+        // Фильтрация предметов только для заданного пользователя
+        const userItems = itemsData.items
+            .filter(item => item.userId === userID)
+            .map(item => ({
+                itemId: item.itemId,
+                title: item.title,
+                price: item.price,
+                image: item.image,
+                rarity: item.rarity
+            }));
 
+        // Рендеринг предметов для конкретного пользователя
+        renderItems(userItems);
     })
+    .catch(error => console.error('Ошибка при загрузке данных о предметах:', error));
 
 
 
     // Функция для рендеринга предметов пользователя
     function renderItems(users) {
-        users.forEach(user => {
-            if (user.id === userID) {
-                user.items.forEach(cardData => {
+        console.log(users);
+            users.forEach(cardData => {
                     // Создание элементов для каждой карточки
                 const card = `
                 <div class="item__card">
@@ -59,6 +59,4 @@ export const renderUserItem = (userID) => {
                 cardsContainer.insertAdjacentHTML('beforeend', card);
                 });
             }
-        });
-    }
-};
+}

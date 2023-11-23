@@ -22,7 +22,6 @@ export const auth = () => {
         const password = document.getElementById('password').value;
 
         URL_USER
-            .then(response => response.json())
             .then(data => {
                 const users = data.users;
                 const user = users.find(u => u.username === username && u.password === password);

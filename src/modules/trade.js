@@ -1,4 +1,4 @@
-import { URL_USERITEMS } from "../index.js";
+import { URL_USERITEMS, URL_ITEMS, URL_USER } from "../index.js";
 
 export const trade = () => {
     const tradeButton = document.querySelector('.main__button-trade');
@@ -6,8 +6,8 @@ export const trade = () => {
     const accordionContainerContentOne = document.querySelector('.accordion-container-content-one');
 
     const getData = async() => {
-        const item = await fetch('../../json/items.json').then(response => response.json());
-        const userItem = await fetch('../../json/useritems.json').then(response => response.json())
+        const item = await URL_ITEMS;
+        const userItem = await URL_USERITEMS;
     
         return { item, userItem }
     }

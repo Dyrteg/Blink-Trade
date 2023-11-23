@@ -10,12 +10,6 @@ export const render = () => {
     
         // Используйте fetch для получения данных из файла JSON
         URL_ITEMS
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json(); // Разрешение Promise с данными JSON
-            })
             .then(data => {
                 // Рендеринг карточек на основе полученных данных
                 renderCards(data.items);

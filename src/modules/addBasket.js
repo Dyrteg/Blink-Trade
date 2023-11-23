@@ -7,7 +7,7 @@ export const addBasket = () => {
             const accordionContainerContentTwo = document.querySelector('.accordion-container-content-two');
             const accordionContainerContentOne = document.querySelector('.accordion-container-content-one');
             
-            fetch('../../json/items.json')
+            fetch('http://localhost:3000/items')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -66,7 +66,7 @@ export const addBasket = () => {
                 }
             )};
 
-            fetch('../../json/useritems.json')
+            fetch('http://localhost:3000/useritems')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
