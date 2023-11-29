@@ -1,7 +1,6 @@
 import { URL_ITEMS } from "../index.js";
 
 export const render = () => {
-    document.addEventListener('DOMContentLoaded', function () {
         const cardsContainer = document.querySelector('.main__item-container-two');
         const accordionPriceTwo = document.querySelector('.accordion-price-two');
         const accordionPriceOne = document.querySelector('.accordion-price-one');
@@ -12,7 +11,7 @@ export const render = () => {
         URL_ITEMS
             .then(data => {
                 // Рендеринг карточек на основе полученных данных
-                renderCards(data.items);
+                renderCards(data);
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
@@ -27,7 +26,7 @@ export const render = () => {
                     <div class="card__image">
                         <img src="${cardData.image}" alt="currier" class="card__picture">
                     </div>
-                    <div class="card__id">${cardData.itemId}</div>
+                    <div class="card__id">${cardData.id}</div>
                     <div class="card__description">
                         <p class="card__title">${cardData.title}</p>
                         <p class="card__rarity">${cardData.rarity}</p>
@@ -42,6 +41,5 @@ export const render = () => {
                 `
                 cardsContainer.insertAdjacentHTML('beforeend', card);
             });
-        }
-    });
+        };
 }

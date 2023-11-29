@@ -22,6 +22,19 @@
                 <button id="open-modal-button" class="header__button">
                     <span class="header__lable">Авторизоваться</span>
                 </button>
+                <div class="header__user-info">
+                    <div class="user__money">0.00 ₽</div>
+                    <div class="header__user" id="user-container">
+                        <img src="" alt="" class="user__image" id="avatar">
+                        <div class="user__menu" id="user-menu">
+                            <!-- Ваше меню здесь -->
+                            <ul>
+                                <li><img class="user__menu-image" src="./img/exit.png" alt="exit">Выйти</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </header>
 
@@ -57,7 +70,7 @@
                             </div>
                             <div class="accordion-content-one accordion-content">
                                 <div class="accorion-container-one scroll">
-                                    <div class="accordion-container-content-one scroll"></div>
+                                    <div class="accordion-container-content-one scroll" id="user-cards-container"></div>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +80,7 @@
                         <div class="item__search">
                             <button class="item__search-button">
                                     <img src="./img/search.png" alt="search" class="item__search-image">
-                                <input type="text" class="item__search-input" placeholder="Поиск...">
+                                <input type="text" class="item__search-input-one item__search-input" placeholder="Поиск...">
                             </button>
                         </div>
 
@@ -85,9 +98,9 @@
             </div>
             
             <div class="main__button">
-                <button class="main__button-trade">Обмен</button>
+                <button type="button" class="main__button-trade" id="trade-button" disabled>Обмен</button>
                 <div class="main__button-price">
-                    <p class="button-price__text">Цена</p>
+                    <p class="button-price__text">Фильтр по стоимости</p>
                     <input type="text" name="price-one" id="button-price__one" placeholder="₽ 0.00">
                     -
                     <input type="text" name="price-two" id="button-price__two" placeholder="₽ 0.00">
@@ -108,7 +121,7 @@
                             </div>
                         </div>
                         <div class="accordion-content-two accordion-content">
-                            <div class="accordion-container-content-two scroll">
+                            <div class="accordion-container-content-two scroll" id="trade-cards-container">
 
                             </div>
                         </div>
@@ -119,7 +132,7 @@
                     <div class="item__search">
                         <button class="item__search-button">
                                 <img src="./img/search.png" alt="search" class="item__search-image">
-                            <input type="text" class="item__search-input" placeholder="Поиск...">
+                            <input type="text" class="item__search-input-two item__search-input" placeholder="Поиск...">
                         </button>
                     </div>
 

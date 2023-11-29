@@ -53,3 +53,33 @@
     width: 40px;
     height: 35px;
 }
+
+.header__user {
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+}
+
+.user__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.header__user:hover {
+    border: 1px solid #747180;
+}
+
+.header__user-info {
+    display: none;
+    align-items: center;
+    gap: 40px;
+}
+
+.user__money {
+    color: white;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+}

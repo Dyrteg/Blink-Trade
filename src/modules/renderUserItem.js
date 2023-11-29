@@ -1,8 +1,13 @@
 import { URL_USERITEMS } from "../index.js";
 
-export const renderUserItem = (userID) => {
+export const renderUserItem = ( userID) => {
     const mainItemWarning = document.getElementById('main__item-warning-container');
     const mainItemContainerOne = document.querySelector('.main__item-container-one');
+    const headerButton = document.querySelector('.header__button');
+    const headerUserInfo = document.querySelector('.header__user-info');
+
+    headerButton.style.display = 'none';
+    headerUserInfo.style.display = 'flex';
 
     mainItemContainerOne.style.display = 'flex';
     mainItemWarning.style.display = 'none';
@@ -12,19 +17,19 @@ export const renderUserItem = (userID) => {
         // Используйте fetch для получения данных из файла JSON
     // Загрузка данных о предметах
     // Загрузка данных о предметах для конкретного пользователя
-    fetch('http://localhost:3000/useritems')
-    .then(itemsResponse => itemsResponse.json())
+    URL_USERITEMS
     .then(itemsData => {
         // Фильтрация предметов только для заданного пользователя
-        const userItems = itemsData.items
+        const userItems = itemsData
             .filter(item => item.userId === userID)
             .map(item => ({
-                itemId: item.itemId,
+                id: item.id,
                 title: item.title,
                 price: item.price,
                 image: item.image,
                 rarity: item.rarity
             }));
+            
 
         // Рендеринг предметов для конкретного пользователя
         renderItems(userItems);
@@ -35,7 +40,6 @@ export const renderUserItem = (userID) => {
 
     // Функция для рендеринга предметов пользователя
     function renderItems(users) {
-        console.log(users);
             users.forEach(cardData => {
                     // Создание элементов для каждой карточки
                 const card = `
@@ -43,7 +47,7 @@ export const renderUserItem = (userID) => {
                     <div class="card__image">
                         <img src="${cardData.image}" alt="currier" class="card__picture">
                     </div>
-                    <div class="card__id">${cardData.itemId}</div>
+                    <div class="card__id">${cardData.id}</div>
                     <div class="card__description">
                         <p class="card__title">${cardData.title}</p>
                         <p class="card__rarity">${cardData.rarity}</p>

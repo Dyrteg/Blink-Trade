@@ -480,3 +480,40 @@ h2 {
     background-color: #ff8095;
     transform: rotate(-45deg);
 }
+
+#user-menu {
+    display: none;
+    position: absolute;
+    top: 80px; /* Регулируйте положение меню относительно аватарки */
+    right: 30px;
+    background-color: #403d4d;
+    border: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: red;
+    border-radius: 5px;
+}
+
+#avatar-container {
+    position: relative;
+}
+
+.user__menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user__menu li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.user__menu li:hover {
+    background-color: #555261;
+    border-radius: 5px;
+}
+
+.user__menu-image {
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
